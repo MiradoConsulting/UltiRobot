@@ -1,4 +1,3 @@
-//package nz;
 import robocode.*;
 import java.awt.Color;
 import robocode.control.events.BattleStartedEvent;
@@ -14,12 +13,7 @@ public class Ultizet extends Robot
 	 * run: Ultizet's default behavior
 	 */
 	public void run() {
-		// Initialization of the robot should be put here
-
-		// After trying out your robot, try uncommenting the import at the top,
-		// and the next line:
-
-		// setColors(Color.red,Color.blue,Color.green); // body,gun,radar
+		setAllColors(Color.YELLOW);
 
 		// Robot main loop
 		while(true) {
@@ -45,10 +39,6 @@ public class Ultizet extends Robot
 	public void onHitByBullet(HitByBulletEvent e) {
 		// Replace the next line with any behavior you would like
 		back(10);
-	}
-	
-	public void onBattleStarted(BattleStartedEvent e) {
-		setAllColors(Color.YELLOW);
 	}
 	
 	/**
