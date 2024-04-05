@@ -1,5 +1,7 @@
+//package nz;
 import robocode.*;
-//import java.awt.Color;
+import java.awt.Color;
+import robocode.control.events.BattleStartedEvent;
 
 // API help : https://robocode.sourceforge.io/docs/robocode/robocode/Robot.html
 
@@ -34,7 +36,7 @@ public class Ultizet extends Robot
 	 */
 	public void onScannedRobot(ScannedRobotEvent e) {
 		// Replace the next line with any behavior you would like
-		fire(1);
+		//fire(1);
 	}
 
 	/**
@@ -43,6 +45,10 @@ public class Ultizet extends Robot
 	public void onHitByBullet(HitByBulletEvent e) {
 		// Replace the next line with any behavior you would like
 		back(10);
+	}
+	
+	public void onBattleStarted(BattleStartedEvent e) {
+		setAllColors(Color.YELLOW);
 	}
 	
 	/**
